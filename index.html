@@ -10,47 +10,52 @@
   <body>
     <div class="container p-centered m-2">
       <div class="columns">
-        <div class="column col-7 col-mx-auto">
+        <div class="column col-8 col-mx-auto">
           <h2>
-            Project Documentation Input
+            Table of Contents Markdown Generator
           </h2>
           <p>
             Paste your completed documentation here. This application is in its 
             infant stages, and works in a specific way for now. Your documentation
             must be using Markdown. It also must have its section headers using 
-            the <code>##</code> prefix. These will act as the main section links
-            for each section. Any subsequent headers in that section can be
-            set using <code>###</code>, <code>####</code> and so on. The application
-            will parse these as sub-sections of the main section.
+            starting with the <code>##</code> prefix (it will ignore the top level 
+            <code>#</code> prefix to be reserved for the documentation's main header). 
+            These will act as the main section links for each section. Any subsequent 
+            headers in that section can be set using <code>###</code>, <code>####</code> 
+            and so on. The application will parse these as sub-sections of the 
+            main section.
           </p>
         </div>
       </div>
 
       <div class="columns">
-        <div class="column col-7 col-mx-auto">
+        <div class="column col-8 col-mx-auto">
           <div class="form-group">
-            <label class="form-label" for="input-documentation">Your Markdown Documentation</label>
-            <textarea class="form-input" id="input-documentation" placeholder="Your documentation..." rows="20"></textarea>
+            <label class="form-label" for="input-documentation">Your Markdown Documentation Input - Clear Field and Paste Your Documentation In</label>
+            <textarea class="form-input" id="input-documentation" placeholder="Your documentation..." rows="15">
+            </textarea>
           </div>
           <div class="form-group float-right">
-            <button class="btn btn-success">Generate Table of Contents</button>
-            <button class="btn btn-error">Reset Text Area</button>
+            <button class="btn btn-success" id="generate">Generate</button>
+            <button class="btn btn-error" id="reset">Clear</button>
           </div>
         </div>
       </div>
 
       <div class="columns">
-        <div class="column col-7 col-mx-auto">
+        <div class="column col-8 col-mx-auto">
           <h2>
-            Project Documentation Output
+            Table of Contents Output
           </h2>
           <pre class="code" data-lang="Markdown">
             <code id="output">
+              Input your Markdown above.
             </code>
           </pre>
         </div>
       </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="build/main.bundle.js"></script>
   </body>
 </html>
