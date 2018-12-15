@@ -2,6 +2,13 @@
 
 [View Generator](https://mikecm1141.github.io/table_of_contents_generator/)
 
+## Table of Contents
+
+* [Description/Purpose](#descriptionpurpose)
+* [How To Use](#how-to-use)
+* [Issues](#issues)
+* [Contributors](#contributors)
+
 ## Description/Purpose
 
 This simple application was designed to help add a markdown formatted Table of Contents generator to their documentation.
