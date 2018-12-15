@@ -11,7 +11,7 @@
 
 ## Description/Purpose
 
-This simple application was designed to help add a markdown formatted Table of Contents generator to their documentation.
+This simple application was designed to help developers add a markdown formatted Table of Contents generator to their documentation.
 
 ## How To Use
 
