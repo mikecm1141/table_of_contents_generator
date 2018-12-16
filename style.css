@@ -1,0 +1,18 @@
+#output {
+  border-radius: .1rem;
+  border: 0;
+  color:#3b4351;
+  background:#f7f8f9;
+  position:relative;
+  display:block;
+  line-height:1.5;
+  overflow-x:auto;
+  padding:1rem;
+  font-size: .7rem;
+  font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
+}
+
+#output-label {
+  color:#bcc3ce;
+  font-size:.7rem;
+}
