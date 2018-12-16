@@ -42,11 +42,11 @@ var generateToc = function generateToc() {
     }
   }
 
-  $('#output').text(tocOutput);
+  $('#output').val(tocOutput);
 };
 
 var addExampleDoc = function addExampleDoc() {
-  var example = '## System Requirements\n\nSome system requirements here.\n\n### Recommended Versions\n\nUse version 1.0 of ExampleModule.\n\n## Database Setup\n\nInteger placerat augue sit amet congue hendrerit. Proin posuere, diam in porttitor vehicula, elit est pulvinar massa, eget tristique orci odio nec ligula. Etiam sed leo mollis, feugiat lorem sit amet, sagittis dolor. Maecenas condimentum lectus vitae mauris viverra consectetur. Praesent quis magna tempor, bibendum velit vel, lobortis justo. Proin. \n\n## Installation\n\nInteger placerat augue sit amet congue hendrerit. Proin posuere, diam in porttitor vehicula, elit est pulvinar massa, eget tristique orci odio nec ligula. Etiam sed leo mollis, feugiat lorem sit amet, sagittis dolor. Maecenas condimentum lectus vitae mauris viverra consectetur. Praesent quis magna tempor, bibendum velit vel, lobortis justo. Proin. \n\n### Running The Test Suite\n\nInteger placerat augue sit amet congue hendrerit. Proin posuere, diam in porttitor vehicula, elit est pulvinar massa, eget tristique orci odio nec ligula. Etiam sed leo mollis, feugiat lorem sit amet, sagittis dolor. Maecenas condimentum lectus vitae mauris viverra consectetur. Praesent quis magna tempor, bibendum velit vel, lobortis justo. Proin. \n\n## Endpoints\n\nInteger placerat augue sit amet congue hendrerit. Proin posuere, diam in porttitor vehicula, elit est pulvinar massa, eget tristique orci odio nec ligula. Etiam sed leo mollis, feugiat lorem sit amet, sagittis dolor. Maecenas condimentum lectus vitae mauris viverra consectetur. Praesent quis magna tempor, bibendum velit vel, lobortis justo. Proin. \n\n### Endpoint 1\n\nInteger placerat augue sit amet congue hendrerit. Proin posuere, diam in porttitor vehicula, elit est pulvinar massa, eget tristique orci odio nec ligula. Etiam sed leo mollis, feugiat lorem sit amet, sagittis dolor. Maecenas condimentum lectus vitae mauris viverra consectetur. Praesent quis magna tempor, bibendum velit vel, lobortis justo. Proin. \n\n#### Endpoint 1 GET\n##### Endpoint 1 GET Happy Response\n##### Endpoint 1 GET Sad Response\n#### Endpoint 1 POST\n##### Endpoint 1 POST Body Requirements\n###### Endpoint 1 POST Happy Response\n###### Endpoint 1 POST Sad Response\n### Endpoint 2\n#### Endpoint 2 GET\n#### Endpoint 2 POST\n## Contributors\n## Dependencies';
+  var example = '## System Requirements\n\nSome system requirements here.\n\n### Recommended Versions\n\nUse version 1.0 of ExampleModule.\n\n## Database Setup\n\nInteger placerat augue sit amet congue hendrerit. Proin posuere, diam in porttitor vehicula, elit est pulvinar massa, eget tristique orci odio nec ligula. Etiam sed leo mollis, feugiat lorem sit amet, sagittis dolor. Maecenas condimentum lectus vitae mauris viverra consectetur. Praesent quis magna tempor, bibendum velit vel, lobortis justo. Proin. \n\n## Installation\n\nInteger placerat augue sit amet congue hendrerit. Proin posuere, diam in porttitor vehicula, elit est pulvinar massa, eget tristique orci odio nec ligula. Etiam sed leo mollis, feugiat lorem sit amet, sagittis dolor. Maecenas condimentum lectus vitae mauris viverra consectetur. Praesent quis magna tempor, bibendum velit vel, lobortis justo. Proin. \n\n### Running The Test Suite\n\nInteger placerat augue sit amet congue hendrerit. Proin posuere, diam in porttitor vehicula, elit est pulvinar massa, eget tristique orci odio nec ligula. Etiam sed leo mollis, feugiat lorem sit amet, sagittis dolor. Maecenas condimentum lectus vitae mauris viverra consectetur. Praesent quis magna tempor, bibendum velit vel, lobortis justo. Proin. \n\n## Endpoints\n\nInteger placerat augue sit amet congue hendrerit. Proin posuere, diam in porttitor vehicula, elit est pulvinar massa, eget tristique orci odio nec ligula. Etiam sed leo mollis, feugiat lorem sit amet, sagittis dolor. Maecenas condimentum lectus vitae mauris viverra consectetur. Praesent quis magna tempor, bibendum velit vel, lobortis justo. Proin. \n\n### Endpoint 1\n\nInteger placerat augue sit amet congue hendrerit. Proin posuere, diam in porttitor vehicula, elit est pulvinar massa, eget tristique orci odio nec ligula. Etiam sed leo mollis, feugiat lorem sit amet, sagittis dolor. Maecenas condimentum lectus vitae mauris viverra consectetur. Praesent quis magna tempor, bibendum velit vel, lobortis justo. Proin. \n\n#### Endpoint 1 GET\n##### Endpoint 1 GET Happy Response\n##### Endpoint 1 GET Sad Response\n#### Endpoint 1 POST\n##### Endpoint 1 POST Body Requirements\n###### Endpoint 1 POST Happy Response\n###### Endpoint 1 POST Sad Response\n### Endpoint 2\n#### Endpoint 2 POST\n## Contributors\n## Dependencies';
   $('#input-documentation').val(example);
   generateToc();
 };
@@ -59,6 +59,15 @@ $('#reset').on('click', function () {
 
 $('#generate').on('click', function () {
   generateToc();
+});
+
+$('#copy-output').on('click', function () {
+  var output = $('#output');
+
+  output.select();
+  document.execCommand('copy');
+
+  $('#output-label').text('Copied Table of Contents Output!');
 });
 
 addExampleDoc();

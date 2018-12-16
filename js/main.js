@@ -40,7 +40,7 @@ const generateToc = () => {
     }
   }
 
-  $('#output').text(tocOutput);
+  $('#output').val(tocOutput);
 }
 
 const addExampleDoc = () => {
@@ -80,7 +80,6 @@ Integer placerat augue sit amet congue hendrerit. Proin posuere, diam in porttit
 ###### Endpoint 1 POST Happy Response
 ###### Endpoint 1 POST Sad Response
 ### Endpoint 2
-#### Endpoint 2 GET
 #### Endpoint 2 POST
 ## Contributors
 ## Dependencies`;
@@ -96,6 +95,15 @@ $('#reset').on('click', () => {
 
 $('#generate').on('click', () => {
   generateToc();
+});
+
+$('#copy-output').on('click', () => {
+  let output = $('#output');
+
+  output.select();
+  document.execCommand('copy');
+
+  $('#output-label').text('Copied Table of Contents Output!');
 });
 
 addExampleDoc();
