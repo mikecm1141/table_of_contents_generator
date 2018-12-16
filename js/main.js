@@ -45,12 +45,33 @@ const generateToc = () => {
 
 const addExampleDoc = () => {
   let example = `## System Requirements
+
+Some system requirements here.
+
 ### Recommended Versions
+
+Use version 1.0 of ExampleModule.
+
 ## Database Setup
+
+Integer placerat augue sit amet congue hendrerit. Proin posuere, diam in porttitor vehicula, elit est pulvinar massa, eget tristique orci odio nec ligula. Etiam sed leo mollis, feugiat lorem sit amet, sagittis dolor. Maecenas condimentum lectus vitae mauris viverra consectetur. Praesent quis magna tempor, bibendum velit vel, lobortis justo. Proin. 
+
 ## Installation
+
+Integer placerat augue sit amet congue hendrerit. Proin posuere, diam in porttitor vehicula, elit est pulvinar massa, eget tristique orci odio nec ligula. Etiam sed leo mollis, feugiat lorem sit amet, sagittis dolor. Maecenas condimentum lectus vitae mauris viverra consectetur. Praesent quis magna tempor, bibendum velit vel, lobortis justo. Proin. 
+
 ### Running The Test Suite
+
+Integer placerat augue sit amet congue hendrerit. Proin posuere, diam in porttitor vehicula, elit est pulvinar massa, eget tristique orci odio nec ligula. Etiam sed leo mollis, feugiat lorem sit amet, sagittis dolor. Maecenas condimentum lectus vitae mauris viverra consectetur. Praesent quis magna tempor, bibendum velit vel, lobortis justo. Proin. 
+
 ## Endpoints
+
+Integer placerat augue sit amet congue hendrerit. Proin posuere, diam in porttitor vehicula, elit est pulvinar massa, eget tristique orci odio nec ligula. Etiam sed leo mollis, feugiat lorem sit amet, sagittis dolor. Maecenas condimentum lectus vitae mauris viverra consectetur. Praesent quis magna tempor, bibendum velit vel, lobortis justo. Proin. 
+
 ### Endpoint 1
+
+Integer placerat augue sit amet congue hendrerit. Proin posuere, diam in porttitor vehicula, elit est pulvinar massa, eget tristique orci odio nec ligula. Etiam sed leo mollis, feugiat lorem sit amet, sagittis dolor. Maecenas condimentum lectus vitae mauris viverra consectetur. Praesent quis magna tempor, bibendum velit vel, lobortis justo. Proin. 
+
 #### Endpoint 1 GET
 ##### Endpoint 1 GET Happy Response
 ##### Endpoint 1 GET Sad Response
