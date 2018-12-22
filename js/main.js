@@ -33,10 +33,6 @@ const generateToc = () => {
       let headingText = currentLine.slice(6, currentLine.length);
       let headingLink = formatLink(headingText);
       tocOutput = tocOutput + `            * [${headingText}](#${headingLink})\n`
-    } else if (countOctothorpe(currentLine) === 6) {
-      let headingText = currentLine.slice(7, currentLine.length);
-      let headingLink = formatLink(headingText);
-      tocOutput = tocOutput + `                * [${headingText}](#${headingLink})\n`
     }
   }
 
