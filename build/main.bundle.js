@@ -35,10 +35,6 @@ var generateToc = function generateToc() {
       var _headingText3 = currentLine.slice(6, currentLine.length);
       var _headingLink3 = formatLink(_headingText3);
       tocOutput = tocOutput + ('            * [' + _headingText3 + '](#' + _headingLink3 + ')\n');
-    } else if (countOctothorpe(currentLine) === 6) {
-      var _headingText4 = currentLine.slice(7, currentLine.length);
-      var _headingLink4 = formatLink(_headingText4);
-      tocOutput = tocOutput + ('                * [' + _headingText4 + '](#' + _headingLink4 + ')\n');
     }
   }
 
